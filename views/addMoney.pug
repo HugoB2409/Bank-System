@@ -1,0 +1,17 @@
+extends layout
+block content
+    form(method="Post" action="/addMoney")
+        .form-group
+            label Numero de la carte
+            input.form-control(type="text" name="number" value="4024007112788192" )
+        .form-group
+            label Date d'expiration (YY-MM)
+            input.form-control(type="text" name="expirationDate" value="24-02" )
+        .form-group
+            label Code CVC
+            input.form-control(type="text" name="cvc" value="123" )
+        .form-group
+            label Montant
+            input.form-control(type="text" name="montant" placeholder="40.99" required=true)
+        .text-right
+            input(type="submit" value="Ajouter").btn.btn-success.btn-sm

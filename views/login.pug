@@ -1,0 +1,39 @@
+doctype html
+head
+    title Login
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    link(rel='stylesheet' type='text/css' href='stylesheets/login.css')
+    link(rel='stylesheet' type='text/css' href='/scripts/dist/css/bootstrap.css')
+    link(rel='stylesheet' type='text/css' href='/fonts/css/font-awesome.min.css')
+    script(src='javascripts/login.js')
+
+body
+    .limiter
+        .container-login100
+            .wrap-login100
+                .login100-pic.js-tilt(data-tilt='')
+                    img(src='images/login.png' alt='IMG')
+                form(method="Post" action="/login").login100-form.validate-form
+                    span.login100-form-title
+                        | Connexion
+                    h6.text-danger=message
+                    .wrap-input100.validate-input(data-validate='Valid email is required: ex@abc.xyz')
+                        input.input100(type='text' name='email' placeholder='Email')
+                        span.focus-input100
+                        span.symbol-input100
+                            i.fa.fa-envelope(aria-hidden='true')
+                    .wrap-input100.validate-input(data-validate='Password is required')
+                        input.input100(type='password' name='pass' placeholder='Mot de passe')
+                        span.focus-input100
+                        span.symbol-input100
+                            i.fa.fa-lock(aria-hidden='true')
+                    .container-login100-form-btn
+                        input(type="submit" value="CONNEXION").login100-form-btn
+                    .text-center.pt-5
+                        a.txt2(href='/signup')
+                            | Create your Account
+                            i.fa.fa-long-arrow-right.m-l-5(aria-hidden='true')
+
+
+

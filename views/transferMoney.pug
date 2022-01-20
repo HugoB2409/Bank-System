@@ -1,0 +1,12 @@
+extends layout
+block content
+    form(method="Post" action="/transferMoney")
+        h6.text-danger=message
+        .form-group
+            label Nom d'utilisateur du destinataire
+            input.form-control(type="text" name="username" placeholder="bob123" required=true)
+        .form-group
+            label Montant
+            input.form-control(type="text" name="amount" placeholder="40.99" required=true)
+        .text-right
+            input(type="submit" value="Transferer").btn.btn-success.btn-sm

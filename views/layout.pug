@@ -1,0 +1,27 @@
+html
+    head
+        title Page d'accueil
+        meta(charset='UTF-8')
+        script(src="/jquery/dist/jquery.js")
+        script(src="/scripts/dist/js/bootstrap.bundle.js")
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+        link(rel='stylesheet' type='text/css' href='/scripts/dist/css/bootstrap.css')
+        link(rel='stylesheet' type='text/css' href='/fonts/css/font-awesome.min.css')
+
+
+    body
+        nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+            a.navbar-brand(href='/')
+            button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+                span.navbar-toggler-icon
+            #navbarSupportedContent.collapse.navbar-collapse
+                ul.navbar-nav.mr-auto
+                    li.nav-item.active
+                        a.nav-link.font-weight-bold.h2(href='/') BatBank
+                ul.navbar-nav.mr-right
+                    a.nav-link.size-lg.text-white.lni-fade-right-effect-hover(href='/logout')
+                        i.fa.fa-long-arrow-right.fa-3x
+        .container
+            h1=title
+            br
+            block content

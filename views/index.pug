@@ -1,0 +1,28 @@
+extends layout
+block content
+    .card
+        #headingOne.card-header.d-flex
+            b.flex-grow-1 Solde
+            b=balance + "$"
+    br
+    .text-left
+        a.btn.btn-success.btn-md.mr-2(href="/addMoney")
+            i.fa.fa-plus-circle.mr-1
+            ="Ajouter des fonds"
+        a.btn.btn-success.btn-md(href="/transferMoney")
+            i.fa.fa-plus-circle.mr-1
+            ="Virement entre compte"
+    br
+    h2.mb-3 Historique de transactions
+    table.table
+        thead
+            tr
+                th(scope='col') Montant
+                th(scope='col') Expéditeur
+                th(scope='col') Destinataire
+        tbody
+            each transaction in transactions
+                tr
+                    th=transaction.amount
+                    td=transaction.sender
+                    td=transaction.receiver
